@@ -111,22 +111,22 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   );
   $form['simple']['advanced_link'] = $link;
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
-  if (theme_get_setting('hag_theme_search_text')) {
-    $form['simple']['hag_theme_text_search_text'] = array(
+  if (theme_get_setting('hagthemepubliccopy_search_text')) {
+    $form['simple']['hagthemepubliccopy_text_search_text'] = array(
       '#weight' => -1,
-      '#markup' => "<p class='simple-search-text'>" . theme_get_setting('hag_theme_search_text') . "</p>",
+      '#markup' => "<p class='simple-search-text'>" . theme_get_setting('hagthemepubliccopy_search_text') . "</p>",
     );
   }
   $menu_name = variable_get('menu_header_menu_links_source', 'menu-header-menu');
   $tree = menu_tree($menu_name);
-  $form['simple']['hag_theme_search_main_menu'] = array(
+  $form['simple']['hagthemepubliccopy_search_main_menu'] = array(
     '#weight' => 8,
     '#markup' => drupal_render($tree),
   );
 
   $menu_name = variable_get('menu_front-collection-links_links_source', 'menu-front-collection-links');
   $tree = menu_tree($menu_name);
-  $form['simple']['hag_theme_collection_main_menu'] = array(
+  $form['simple']['hagthemepubliccopy_collection_main_menu'] = array(
     '#weight' => 9,
     '#markup' => drupal_render($tree),
   );
@@ -222,7 +222,7 @@ function hagthemepubliccopy_block_view_islandora_solr_simple_alter(&$data, $bloc
 function hagthemepubliccopy_islandora_solr_query_alter($islandora_solr_query) {
   // Remove objects with the content model islandora:collectionCModel
   // from the search results page.
-  if (theme_get_setting('hag_theme_omit')) {
+  if (theme_get_setting('hagthemepubliccopy_omit')) {
     $path = current_path();
     $path_array = explode("/", $path);
     if (count($path_array) >= 2){

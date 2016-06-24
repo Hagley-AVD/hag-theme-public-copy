@@ -25,11 +25,11 @@ body {
 }
 
 #footer {
-      background-color: <?php print ir7_hex2rgba($footer, .5) ?>;
+      background-color: <?php print hagthemepubliccopy_hex2rgba($footer, .5) ?>;
 }
 
 #bottom {
-      background-color: <?php print ir7_hex2rgba($bottom, .8) ?>;
+      background-color: <?php print hagthemepubliccopy_hex2rgba($bottom, .8) ?>;
 }
 
 .sidebar {
@@ -37,7 +37,7 @@ body {
 }
 
 .front .islandora-simple-search{
-  background-color: <?php print ir7_hex2rgba($frontsearch, .5) ?>;
+  background-color: <?php print hagthemepubliccopy_hex2rgba($frontsearch, .5) ?>;
 }
 
 /*In this case, `designkit_colorshift` is used to darken the background color

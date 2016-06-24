@@ -19,16 +19,16 @@ function hagthemepubliccopy_form_system_theme_settings_alter(&$form, &$form_stat
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
-  $form['hagthemepubliccopy_custom']['hag_theme_omit'] = array(
+  $form['hagthemepubliccopy_custom']['hagthemepubliccopy_omit'] = array(
     '#type' => 'checkbox',
     '#title' => t('Remove collections from search results.'),
     '#default_value' => theme_get_setting('hagthemepubliccopy_omit'),
     '#description' => t("If checked, this option will automatically omit objects with a collection content model from search results."),
   );
-  $form['hagthemepubliccopy_custom']['hag_theme_search_text'] = array(
+  $form['hagthemepubliccopy_custom']['hagthemepubliccopy_search_text'] = array(
     '#type' => 'textarea',
     '#title' => t('Search area welcome text.'),
-    '#default_value' => theme_get_setting('hag_theme_search_text'),
+    '#default_value' => theme_get_setting('hagthemepubliccopy_search_text'),
     '#description' => t("The search text to appear in the simple search box on the front page."),
   );
 
