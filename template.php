@@ -7,7 +7,7 @@
 /**
  * Implements hook_preprocess_html().
  */
-function ir7_preprocess_html(&$variables){
+function hag-theme-public-copy_preprocess_html(&$variables){
   if ($variables['is_front']) {
     module_load_include('module', 'islandora_basic_collection', 'islandora_basic_collection');
     $background_collection_pid = (theme_get_setting('hag_background_collection_pid') ? theme_get_setting('hag_background_collection_pid') : "islandora:root");
@@ -27,7 +27,7 @@ function ir7_preprocess_html(&$variables){
       $dsid = (theme_get_setting('hag_background_dsid') ? theme_get_setting('hag_background_dsid') : "TN");
       $variables['background_image'] = "/islandora/object/$pid/datastream/$dsid/view";
     } else {
-      $path = drupal_get_path('theme', 'ir7');
+      $path = drupal_get_path('theme', 'hag-theme-public-copy');
       $image_path = $path . '/images/bg_lightwoodfloor.jpg';
       $variables['background_image'] = $image_path;
     }
@@ -37,7 +37,7 @@ function ir7_preprocess_html(&$variables){
 /**
  * Implements hook_preprocess_page().
  */
-function ir7_preprocess_page(&$variables) {
+function hag-theme-public-copy_preprocess_page(&$variables) {
   if ($variables['is_front'] == FALSE) {
     // Add the search for the header.
     if (module_exists('islandora_solr')) {
@@ -67,7 +67,7 @@ function ir7_preprocess_page(&$variables) {
  * @return string
  *   The RGBA color value.
  */
-function ir7_hex2rgba($color, $opacity = false) {
+function hag-theme-public-copy_hex2rgba($color, $opacity = false) {
   $default = 'rgb(0,0,0)';
   //Return default if no color provided
   if(empty($color))
@@ -104,7 +104,7 @@ function ir7_hex2rgba($color, $opacity = false) {
 /**
  * Implements hook_form_alter().
  */
-function ir7_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, $form_id) {
+function hag-theme-public-copy_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, $form_id) {
 
   $link = array(
     '#markup' => l(t("Advanced Search"), "advanced-search", array('attributes' => array('class' => array('adv_search')))),
@@ -135,7 +135,7 @@ function ir7_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, 
 /**
  * Implements hook_preprocess().
  */
-function ir7_preprocess_islandora_basic_collection_grid(&$variables) {
+function hag-theme-public-copy_preprocess_islandora_basic_collection_grid(&$variables) {
   foreach ($variables['associated_objects_array'] as $key => $value) {
     $variables['associated_objects_array'][$key]['classes'] = array();
     if (in_array("islandora:collectionCModel", $value['object']->models)) {
@@ -150,7 +150,7 @@ function ir7_preprocess_islandora_basic_collection_grid(&$variables) {
  * Preprocess for legacy SPARQL collection views.
  *
  */
-function ir7_preprocess_islandora_basic_collection_wrapper(&$variables) {
+function hag-theme-public-copy_preprocess_islandora_basic_collection_wrapper(&$variables) {
   $obj = $variables['islandora_object'];
   if (module_exists('islandora_collection_search')) {
     $block = module_invoke('islandora_collection_search', 'block_view', 'islandora_collection_search');
@@ -181,7 +181,7 @@ function ir7_preprocess_islandora_basic_collection_wrapper(&$variables) {
  * Preprocess for solr driven collection views.
  *
  */
-function ir7_preprocess_islandora_objects_subset(&$variables) {
+function hag-theme-public-copy_preprocess_islandora_objects_subset(&$variables) {
   if (module_exists('islandora_collection_search')) {
     $block = module_invoke('islandora_collection_search', 'block_view', 'islandora_collection_search');
     $variables['islandora_collection_search_block'] = render($block['content']);
@@ -212,14 +212,14 @@ function ir7_preprocess_islandora_objects_subset(&$variables) {
 /**
  * Implements hook_block_view_MODULE_DELTA_alter().
  */
-function ir7_block_view_islandora_solr_simple_alter(&$data, $block) {
-  drupal_add_js(drupal_get_path('theme', 'ir7') . '/js/clean_simple_search.js');
+function hag-theme-public-copy_block_view_islandora_solr_simple_alter(&$data, $block) {
+  drupal_add_js(drupal_get_path('theme', 'hag-theme-public-copy') . '/js/clean_simple_search.js');
 }
 
 /**
  * Implements hook_islandora_solr_query_alter().
  */
-function ir7_islandora_solr_query_alter($islandora_solr_query) {
+function hag-theme-public-copy_islandora_solr_query_alter($islandora_solr_query) {
   // Remove objects with the content model islandora:collectionCModel
   // from the search results page.
   if (theme_get_setting('hag_theme_omit')) {
@@ -236,7 +236,7 @@ function ir7_islandora_solr_query_alter($islandora_solr_query) {
 /**
  * Implements hook_form_alter().
  */
-function ir7_block_view_islandora_usage_stats_recent_activity_alter(&$data, $block) {
+function hag-theme-public-copy_block_view_islandora_usage_stats_recent_activity_alter(&$data, $block) {
   foreach($data['content']['#items'] as $key => $value) {
     $pid = $value['data-pid'];
     $new_content = "<div class='new-collections-item-wrapper popular-resources'><a href='/islandora/object/$pid'>"
