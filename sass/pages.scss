@@ -1,0 +1,708 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+@import "base";
+@import "_variables";
+
+.region-header {
+}
+
+/*
+ * Client based customizations.
+ */
+.mean-bar {
+  margin-top: 0px;
+}
+
+.mean-container .mean-bar {
+  z-index: auto !important;
+}
+
+.social-share-outer {
+  padding-bottom: 2em;
+}
+
+.contextual-links-region {
+  position: relative;
+}
+
+html {
+    font-family: 'Open Sans',helvetica,airal,sans-serif;
+}
+#page {
+    background: #FFFFFF;
+}
+#block-menu-menu-header-menu {
+    float: left;
+    font-size: 1em;
+    height: 35px;
+}
+.block-shib-auth {
+  float:right;
+  padding-left: 15px;
+  font-size: 85%;
+}
+
+.collection-image-wrapper img {
+  max-height: 30em;
+  width: 100%;
+}
+
+#content {
+    /*box-shadow: none!important;*/
+}
+.breadcrumb {
+    font-size: .95em;
+    letter-spacing: 1.2pt;
+    line-height: 1.1em;
+}
+#footer menu, ol, ul{
+    padding: 0 0 0 0;
+}
+
+.body-wrapper{
+  background-image: no-repeat;
+  background-size: cover;
+}
+
+body{
+  background-size: cover !important;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+.item-list ul {
+  padding: 0 0 0 0;
+}
+
+#block-menu-menu-footer-menu {
+    font-size: .95em;
+}
+
+.view-footer-social-menu-links td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.browse-all-item-wrapper {
+
+}
+
+.new-collections-item-wrapper img {
+  vertical-align: middle;
+  max-width: 5em;
+}
+
+#mediaplayer{
+  max-width: 100%;
+}
+
+#page-title {
+  background: none !important;
+  font-weight: normal;
+  color:$gold !important;
+}
+
+.region.region-highlighted {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+/*
+ * View Slideshow
+ */
+.flex-direction-nav a {
+  line-height: 40px;
+}
+.flex-viewport {
+  height: auto !important;
+  ul {
+    li {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+.flexslider .slides {
+  margin: 0 auto !important;
+}
+.front-page-slideshow {
+  width: 100%;
+  box-sizing: border-box;
+}
+.flex-viewport {
+  ul {
+    display: inline-block !important;
+  }
+  img {
+    display: block;
+    height: 150px;
+  }
+}
+.flexslider-views-slideshow-main-frame li {
+    position: relative;
+}
+p.flex-caption {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+}
+
+.flexslider {
+  margin-bottom: 40px;
+  a{
+    display: inherit;
+  }
+  .slides {
+    img {
+      display: inline-block;
+      height: auto;
+      max-height: 30em;
+    }
+  }
+}
+.slideshow-item-image-wrapper {
+  text-align: center;
+}
+
+.slides li {
+  display: inline-block!important;
+  float: none!important;
+}
+
+.collection_folder {
+  background-image: url("../images/folder.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  height: 60px;
+  width: 60px;
+}
+
+.islandora-default-thumb {
+  @extend .collection_folder;
+  a {
+    img {
+      opacity: 0;
+    }
+  }
+}
+
+.view-content{
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+
+.islandora-basic-collection-thumb{
+  text-align: center;
+  img{
+    max-width: 10em;
+  }
+}
+
+.islandora-object-thumb{
+  text-align: center;
+  img{
+    max-width: 10em;
+  }
+}
+
+.islandora-basic-collection-caption{
+  text-align: center;
+}
+
+.islandora-object-caption{
+  text-align: center;
+}
+
+.block-front-page-browse-collection table {
+  table-layout: fixed;
+}
+
+div.widgets-element-horizontal {
+    float: right;
+}
+
+#content #widgets-element-socialmedia_share-default{
+  div {
+    max-width: 20px;
+  }
+}
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+
+#skip-link {
+  margin: 0;
+
+  a,
+  a:visited {
+    display: block;
+    width: 100%;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+  }
+}
+
+.block-border-bottom, #content{
+  display: inline-block;
+}
+
+/*
+ * Searching
+ */
+
+.islandora-solr-search-result {
+  border-top: none;
+  border-bottom: none;
+  background: #f7f9f6;
+}
+
+.islandora-solr-search-results {
+  margin-top: 3em;
+}
+
+.solr-fields dt, .solr-fields dd {
+  border-top: 1px solid #EEF0ED;
+  word-wrap: break-word;
+}
+dl.solr-fields {
+  border-top: none;
+  float: right;
+  width: 83%;
+}
+
+dl.solr-thumb {
+  float: left;
+  width: 15%;
+  margin: 2% 0 2% 1%;
+}
+
+.front{
+  #navigation{
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  #content{
+    background-color: transparent;
+  }
+  #page{
+    background-color: transparent;
+    padding-top: 100px;
+  }
+  .islandora-simple-search{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    /*transform: translateY(35%);*/
+    h2{
+      text-align: center;
+      color: white;
+      font-size: 250%;
+    }
+    ul.menu{
+      text-align: center;
+      float: left;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    a {
+      float: left;
+      text-decoration: none;
+      color: white;
+      padding: 0.2em 0.6em;
+      border-right: 1px solid white;
+    }
+    a:hover{
+      background-color: transparent;
+      color: grey;
+    }
+    li {
+      display: inline-block;
+    }
+    li:hover{
+      background-color: transparent;
+    }
+    li:last-child a{
+      border-right: none;
+    }
+  }
+    .simple-search-text {
+      text-align: center;
+    }
+  }
+  #page-title{
+    display: none;
+  }
+  #first-time{
+    display: none;
+  }
+}
+
+.footer-popular-links, #block-system-main-menu, .adv_search{
+  ul.menu{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 0em 0.6em;
+    }
+    a:hover{
+      background-color: transparent;
+      color: grey;
+    }
+    li {
+      display: block;
+    }
+    li:hover{
+      background-color: transparent;
+    }
+  }
+}
+
+#footer, #block-menu-menu-footer-menu{
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 0em 0.6em;
+  }
+  a:hover{
+    background-color: transparent;
+    color: grey;
+  }
+}
+
+/*
+ * Header
+ */
+.h-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+hgroup, #islandora-header-search{
+ // padding-top: 4%;
+}
+
+#logo{
+  text-align: center;
+  img{
+    max-height: 5em;
+    padding-right: 0.5em;
+  }
+}
+/*Accordion Rotator */
+
+div.accordion_button.next {
+  margin-right: 5px;
+}
+div.accordion_button.previous {
+  margin-left: 5px;
+}
+
+.logged-in.not-front #header {
+  padding-top: 0em;
+}
+
+#logo { /* Wrapping link for logo */
+  float: left; /* LTR */
+  margin: 0;
+  padding: 0;
+
+}
+
+#name-and-slogan { /* Wrapper for website name and slogan */
+  float: left;
+  background: transparent;
+}
+
+#site-name { /* The name of the website */
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: normal;
+  //color: #5A5B5D;
+  a:link,
+  a:visited {
+    //color: #5A5B5D;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+#site-slogan { /* The slogan (or tagline) of a website */
+  margin: 0;
+  font-size: 1em;
+  color: #A14243;
+  font-weight: normal;
+}
+
+.region-header { /* Wrapper for any blocks placed in the header region */
+  margin-left: 53px;
+  margin-top: 40px;
+  position: absolute;
+  width: 400px;
+}
+
+.front{
+  #name-and-slogan, #logo, #site-name{
+    display: none;
+  }
+}
+
+/*
+ * Main (container for everything else)
+ */
+
+#main {
+  background: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+/*
+ * Content
+ */
+
+#content {
+  width: 100%;
+  background: #e7e7e7;
+  padding: 1.5em 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+.front #content {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.region-highlighted {
+}
+
+.breadcrumb { /* The path to the current page in the form of a list of links */
+  font-size: 70%;
+  letter-spacing: 0.6pt;
+  line-height: 1.5em;
+  padding-left: 9px;
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 2px 5px 4px;
+
+    a:hover {
+      color: #888;
+    }
+  }
+  li:hover {
+    background: #F7F9F6;
+  }
+  .islandora-solr-breadcrumb-super {
+  font-size: 100%;
+  position: relative;
+  left: 1px; top: 4px;
+    a {
+    color: #222;
+    }
+    a:hover {
+      color: red;
+    }
+  }
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title { /* Comment title */
+  margin: 0;
+  //color: #5A5B5D !important;
+}
+
+tr.even { /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+div.status { /* Normal priority messages */
+}
+
+div.warning,
+tr.warning { /* Medium priority messages */
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error { /* High priority messages. See also the .error declaration below. */
+}
+
+.error { /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning { /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+.tabs { /* See also the tabs.css file. */
+}
+
+.region-help { /* Help text on a page */
+}
+
+.more-help-link { /* Link to more help */
+}
+
+.region-content { /* Wrapper for the actual page content */
+}
+
+ul.inline { /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0; /* LTR */
+  }
+}
+span.field-label { /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager { /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+
+  li { /* Each page number in the pager list */
+    padding: 0 0.5em;
+  }
+}
+
+ul.pager li.pager-current {
+  background: none repeat scroll 0 0 #CCCECF;
+  border: 1px solid #419845;
+  //color: #5A5B5D;
+}
+
+.feed-icon { /* The link to the RSS or Atom feed for the current list of content */
+}
+
+.more-link { /* Aggregator, blog, and forum more link */
+}
+
+#google-pdf-viewer {
+  padding-top: 1.5em;
+}
+
+.islandora-pdf-link {
+  float: right;
+}
+
+.islandora-pdf-sidebar {
+  ul {
+    padding: 0 1em;
+  }
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+
+.region-sidebar-second {
+}
+
+
+/*
+ * Footer
+ */
+
+.f-wrapper, #block-menu-menu-footer-menu{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+.f-wrapper{
+  .block{
+    margin-bottom: 0em;
+  }
+}
+
+.islandora-audio-metadata, .islandora-book-metadata, .islandora-binary-object-metadata, .islandora-pdf-metadata, .islandora-basic-image-metadata, .islandora-large-image-metadata, .islandora-newspaper-metadata, .islandora-video-metadata{
+  li{
+    margin-left: 20px;
+  }
+}
+
+/*
+ * Page bottom
+ */
+
+.region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+}
+

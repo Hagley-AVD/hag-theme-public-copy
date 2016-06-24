@@ -1,0 +1,78 @@
+//
+// Custom sass mixins
+//
+//University Color Pallet
+$sky-blue:        #54a2f0;
+$dark-blue:       #2d3740;
+$tulane-blue:     #224568;
+$gold:            #c46e18;
+$light-gold:      #f79b3e;
+$tulane-green:    #00331a;
+$gibson-stone:    #ebf4e1;
+$spanish-moss:    #535353;
+$oak-leaf:        #006633;
+
+//Main Color Pallet
+$sky-blue:        #54a2f0;
+$dark-blue:       #2d3740;
+$tulane-blue:     #224568;
+$gold:            #c46e18;
+$light-gold:      #f79b3e;
+$tulane-green:    #00331a;
+$gibson-stone:    #ebf4e1;
+$spanish-moss:    #535353;
+$oak-leaf:        #006633;
+
+
+//Text Colors
+$active:          $gold;
+$hover:           $gold;
+
+
+// a 'color' was set to "$fountainbleu", but is not defined"
+//a {
+  //color: darken($dark-blue,15%);
+  //display: inline-block;
+  //word-wrap: break-word;
+  //text-decoration:none;
+ //// font-family: $base-font-family;
+ // &:hover{
+ //   @include transition(all 0.2s ease-in-out);
+ //   color: $active;
+ // }
+//}
+
+
+h1,h2,h3,h4,h5,h6 {
+  color:inherit;
+  word-wrap:break-word;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+  @include text-shadow(rgba(#000, 0.2) 1px 1px 1px);
+  font-family: $base-font-family;
+}
+h1 {
+  //@include adjust-font-size-to(64px);
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  //@include adjust-font-size-to(52px);
+  color:$gold;
+}
+
+ h3,  h4,  h5,  h6 {color:$dark-blue;}
+ h3 {
+  //@include adjust-font-size-to(40px);
+  }
+ h4 {
+  //@include adjust-font-size-to(28px);
+  }
+ h5 {
+ // @include adjust-font-size-to(22px);
+}
+ h6 {
+ // @include adjust-font-size-to(18px);
+}

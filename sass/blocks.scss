@@ -1,0 +1,510 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "base";
+
+.block { /* Block wrapper */
+  margin-bottom: 1.1em;
+  &.first { /* The first block in the region */
+  }
+
+  &.last { /* The last block in the region */
+  }
+
+  &.odd { /* Zebra striping for each block in the region */
+  }
+
+  &.even { /* Zebra striping for each block in the region */
+  }
+
+  h2.block-title { /* Block title */
+    font-family: 'Ropa Sans';
+  }
+}
+
+h2.block-title {
+    border-bottom: none;
+    font-weight: normal;
+    padding: 0.5em 0 0.9em;
+    margin-bottom: 0.9em;
+}
+#block-views-footer-social-menu-links-block {
+    float: right;
+    max-height: 20px;
+    top: -35px;
+    position: relative;
+}
+
+/**
+ * @Islandora Blocks
+ *
+**/
+#block-islandora-solr-simple {
+  display: inline-block;
+  margin-bottom: 1.5em;
+  max-width: 30em;
+  margin-left: 10%;
+  .form-text{
+    max-width: 97%;
+  }
+}
+
+// Header search, all pages but the front.
+#islandora-header-search {
+  .simple-search-text{
+    display: none;
+    float: right;
+  }
+  ul.menu{
+    display: none !important;
+  }
+  .form-submit{
+    display: none;
+  }
+  .form-text {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 85%;
+  }
+  .form-item.form-type-textfield.form-item-islandora-simple-search-query {
+    width: 98%;
+    display: inline-block;
+    margin-bottom: .5em !important;
+  }
+  .adv_search {
+    padding-right: 10px;
+  }
+}
+
+#block-menu-menu-popular-links{
+  margin-bottom: 0px;
+  ul.menu{
+    margin-bottom: 1.33em !important;
+    margin-top: 0em !important;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    li{
+      list-style-image: none;
+      list-style-type: none;
+    }
+  }
+}
+.block-islandora-usage-stats{
+  float: left;
+  padding-left: 10px;
+  .item-list{
+    .list-group{
+      li{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        list-style: none;
+        a{
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.image-block-front,
+.submit-collection-anon, .submit-collection, .welcome {
+  background: #fff;
+  float: right;
+  position: relative;
+  z-index: 100;
+  height: 140px;
+  max-width: 360px;
+  padding: 10px;
+  box-shadow:  0px 0px 5px 1px rgba(38, 37, 38, 0.3);
+    -webkit-box-shadow:  0px 0px 5px 1px rgba(38, 37, 38, 0.5);
+}
+
+.recent-object-item-wrapper{
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: table;
+  a{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+    img{
+      max-width: 2em;
+    }
+  }
+}
+
+.front-page-browse-all-collections{
+  width: 100%;
+  .view-frontpage-solr-boxes{
+    .view-content{
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5em;
+        table-layout: fixed;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.welcome {
+  h2 {
+    color: #3D8396;
+    margin: 0.8em 0;
+    font-weight: normal;
+    font-size: 120%;
+  }
+  p {
+    margin: 0.2em 0;
+    line-height: 1.3em;
+    color: #424143;
+  }
+}
+
+#block-accordion-rotator-accordion-rotator {
+  max-height: 440px;
+  width: 99.5%;
+  float: left;
+  margin-bottom: 1.4em;
+}
+
+#block-views-top-site-searches-block, #block-views-top-facet-searches-block {
+  table {
+    width: 100%;
+  }
+}
+
+.views-field.views-field-dcdescription {
+
+}
+
+.block-islandora-solr {
+  ul {
+    margin: 0.5em 0 0;
+    padding: 0 !important;
+    li {
+      list-style: none;
+    }
+    li:hover {
+      background: #F7F9F6;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+    color: #5A5B5D;
+    font-size: 130%;
+    font-weight: normal;
+  }
+}
+
+.count {
+  color: #888;
+}
+
+.plusminus {
+  display: none;
+}
+
+#block-islandora-solr-display-switch {
+  float: right;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#block-islandora-solr-display-switch {
+  ul {
+    li {
+      float: left;
+    }
+  }
+}
+
+.islandora-solr-display a.display-default, .islandora-solr-display a.display-grid,
+.islandora-solr-display a.display-table {
+  background: url("../images/display-grid-list.png") no-repeat scroll left top transparent;
+  display: inline-block;
+  height: 22px;
+  outline: medium none;
+  text-indent: -9999px;
+  width: 25px;
+}
+
+.islandora-solr-display a.display-grid {
+  background: url("../images/display-grid.png") no-repeat scroll left top transparent;
+}
+
+.islandora-solr-display a.display-table {
+  background: url("../images/display-list.png") no-repeat scroll left top transparent;
+}
+
+#block-islandora-bookmark-islandora-bookmark {
+  clear: left;
+}
+
+#islandora-bookmark-overview-form table, #islandora-bookmark-detailed-overview table {
+  width: 100%;
+}
+
+/**
+  * @Menus 
+  *
+**/
+
+#block-menu-menu-header-menu {
+  line-height: 0.3em !important;
+  height: 30px;
+  width: 100%;
+}
+
+.header-text-logo{
+  margin-bottom: 0px;
+}
+
+#block-views-social-links-block {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  table{
+    width: 100%;
+    div.field-content{
+      text-align: center;
+    }
+  }
+}
+
+.footer-center{
+  .field-item{
+    //text-align: center;
+  }
+}
+
+.footer-left{
+  padding-top: 2em;
+}
+
+/**
+ * @Views Blocks
+ *
+**/
+
+#block-aggregator-category-1 { /* Block for the latest news items in the first category */
+}
+
+#block-aggregator-feed-1 { /* Block for the latest news items in the first feed */
+}
+
+.submit-collection, .submit-collection-anon { /* First block created with "Add block" link */
+  height: 70px;
+  background: #419845 !important;
+  font-size: 130%;
+  font-weight: normal;
+  line-height: 3.2em;
+  float: right;
+  margin-bottom: 0;
+  a {
+    color: #fff;
+    margin-left: 3.2em;
+  }
+  p {
+    margin: 0.25em 0;
+  }
+}
+
+.block-front-page-browse-collection {
+  min-height: auto !important;
+  height: auto;
+  table {
+    width: 100%;
+    td {
+      vertical-align: top;
+    }
+  }
+}
+/* @Google Analytics Views */
+
+#block-views-object-visitors-by-month-block {
+  float: left;
+  padding: 15px;
+  background: #fff;
+  min-height: 520px;
+  box-shadow: 0 0 5px 1px rgba(38, 37, 38, 0.3);
+  -webkit-box-shadow: 0 0 5px 1px rgba(38, 37, 38, 0.3);
+  box-sizing: border-box;
+}
+
+#block-menu-menu-browse-by {
+  @extend #block-views-object-visitors-by-month-block;
+  width: 39.5%;
+  min-height: auto !important;
+  li {
+    list-style: none;
+    padding: 10px;
+  }
+}
+
+#block-widgets-s-socialmedia-share-default {
+  position: relative;
+  right: 0;
+}
+
+.block-front-page-browse-collection {
+  float: right;
+  width: 59.5%;
+}
+#block-views-top-site-searches-block {
+  @extend #block-views-object-visitors-by-month-block;
+  margin: 0;
+  font-size: 90%;
+  th.views-field-search, th.views-field-pageviews {
+    padding: 0.8em 0;
+  } 
+}
+
+#block-views-top-facet-searches-block {
+  @extend #block-views-object-visitors-by-month-block;
+  margin: 0;
+  font-size: 90%;
+}
+
+.block-google-analytics-reports {
+  margin: 0 10px;
+  @extend #block-views-object-visitors-by-month-block;
+  h3 {
+    font-size: 93%;
+    color: #424143;
+  }
+  ol, p {
+    font-size: 90%;
+  }
+}
+
+.block-front-page-browse-collection {
+  @extend #block-views-object-visitors-by-month-block;
+}
+
+/* Accordion Rotator */
+
+#block-accordion-rotator-accordion-rotator {
+  h2 {
+    font-size: 120%;
+    padding: 0 15px;
+    font-weight: normal;
+    margin: 0;
+  }
+  p {
+    font-size: 80%;
+    padding: 0 15px;
+    font-family: arial, helvetica, verdana, sans-serif  !important;
+    margin: 0;
+    font-weight: normal;
+  }
+  .acc_content {
+    background: none;
+  }
+  .box {
+    height: 75px;
+    padding-top: 15px;
+  }
+}
+
+
+
+/* Blockify */
+
+#block-blockify-blockify-logo {
+  img {
+    width: 75%;
+  }
+}
+
+#block-blog-recent { /* "Recent blog posts" block */
+}
+
+#block-book-navigation { /* "Book navigation" block for the current book's table of contents */
+}
+
+#block-comment-recent { /* "Recent comments" block */
+}
+
+#block-forum-active { /* "Active forum topics" block */
+}
+
+#block-forum-new { /* "New forum topics" block */
+}
+
+#block-locale-language { /* Language switcher block */
+}
+
+#block-menu-menu-NAME { /* Custom menu block */
+}
+
+#block-node-recent { /* "Recent content" block */
+}
+
+#block-node-syndicate { /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+#block-poll-recent { /* "Most recent poll" block */
+}
+
+#block-profile-author-information { /* "Author information" block for the profile of the page's author */
+}
+
+#block-search-form { /* "Search form" block */
+}
+
+#block-shortcut-shortcuts { /* "Shortcuts" block */
+}
+
+#block-statistics-popular { /* "Popular content" block */
+}
+
+#block-system-main-menu { /* "Main menu" block */
+}
+
+#block-system-management { /* "Management" block for Drupal management menu */
+}
+
+#block-system-navigation { /* "Navigation" block for Drupal navigation menu */
+  ul {
+    padding-left: 0;
+  }
+}
+
+#block-system-user-menu { /* "User menu" block for Drupal user menu */
+}
+
+#block-system-help { /* "System help" block */
+}
+
+#block-system-main { /* "Main page content" block */
+}
+
+#block-system-powered-by { /* "Powered by Drupal" block */
+}
+
+#block-user-login { /* "User login form" block */
+}
+
+#block-user-new { /* "Who's new" block for a list of the newest users */
+}
+
+#block-user-online { /* "Who's online" block for a list of the online users */
+}
+
+/*
+ * Social Media block
+*/
+
+#block-widgets-s-socialmedia-share-default {
+  .widgets-element {
+    img {
+      width: 80%; 
+    }
+  }
+}

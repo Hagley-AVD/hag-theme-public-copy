@@ -1,0 +1,24 @@
+/*
+ * Conditional Styles for Internet Explorer 8
+*/
+
+#block-accordion-rotator-accordion-rotator {
+    width: 65%;
+}
+
+#block-islandora-solr-simple, .image-block-front, .submit-collection-anon, .submit-collection, .welcome {
+    width: 31%;
+    max-width: 370px;
+}
+
+#block-views-frontpage-solr-boxes-block-1 {
+    width: 97.6%;
+}
+
+#header {
+    padding-bottom: 1em;
+}
+
+#block-views-frontpage-solr-boxes-block, #block-google-analytics-reports-dashboard, #block-views-top-site-searches-block {
+    width: 30%;
+}

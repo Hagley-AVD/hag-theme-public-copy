@@ -1,0 +1,142 @@
+screenshot  = screenshot.png
+name        = Hagley Theme_working
+description = Read the <a href="http://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
+core        = 7.x
+base theme  = zen
+
+; stylesheets[MEDIA][] = FILE
+stylesheets[all][] = system.menus.css
+
+; Then we add our own stylesheets.
+stylesheets[all][] = sass-css/normalize_OLD.css
+stylesheets[all][] = sass-css/wireframes.css
+stylesheets[all][] = sass-css/responsive.css
+stylesheets[all][] = sass-css/pages.css
+stylesheets[all][] = sass-css/blocks.css
+stylesheets[all][] = sass-css/navigation.css
+stylesheets[all][] = sass-css/views-styles.css
+stylesheets[all][] = sass-css/nodes.css
+stylesheets[all][] = sass-css/comments.css
+stylesheets[all][] = sass-css/forms.css
+stylesheets[all][] = sass-css/fields.css
+stylesheets[all][] = sass-css/print.css
+stylesheets[all][] = sass-css/layouts/front-layout.css
+stylesheets[all][] = sass-css/layouts/collection-landing-layout.css
+stylesheets[all][] = sass-css/stickey_footer.css
+
+stylesheets[all][] = css/tabs.css
+
+; Set the conditional stylesheets that are processed by IE.
+stylesheets-conditional[IE 8][all][] = css/ie8.css
+
+scripts[] = js/script.js
+scripts[] = js/frontpage_behaviour.js
+
+regions[sub_header]     = Sub Header
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+
+
+; Various page elements output by the theme can be toggled on and off. The
+; "features" control which of these check boxes display on the
+; admin/appearance config page. This is useful for suppressing check boxes
+; for elements not used by your sub-theme. To suppress a check box, omit the
+; entry for it below. See the Drupal 7 Theme Guide for more info:
+; http://drupal.org/node/171205#features
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+
+
+; Set the default values of settings on the theme-settings.php form.
+
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_title]     = 0
+settings[zen_skip_link_anchor]     = main-menu
+settings[zen_skip_link_text]       = Jump to navigation
+settings[zen_html5_respond_meta][] = respond
+settings[zen_html5_respond_meta][] = html5
+settings[zen_html5_respond_meta][] = meta
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
+
+; To make this sub-theme an admin theme with shortcut links next to titles,
+; uncomment the line below.
+
+;settings[shortcut_module_link]    = 1
+
+; To add a Panels layout (which can also be used by Display Suite), uncomment
+; the line below and see the documentation at: http://drupal.org/node/495654
+;plugins[panels][layouts] = layouts
+
+; Set custom theme colours using DesignKit
+
+; Body Background color
+designkit[color][body][title] = "Body Background"
+designkit[color][body][description] = "Body Background color."
+designkit[color][body][default] = "#ffffff"
+
+; Background color
+designkit[color][page][title] = "Page Background"
+designkit[color][page][description] = "Page Background color."
+designkit[color][page][default] = "#ffffff"
+
+; Header color
+designkit[color][header][title] = "Header color"
+designkit[color][header][description] = "Header color."
+designkit[color][header][default] = "#ffffff"
+
+; Content Area color
+designkit[color][content][title] = "Content color"
+designkit[color][content][description] = "Content color."
+designkit[color][content][default] = "#ffffff"
+
+; Breadcrumb Bar color
+designkit[color][breadcrumb][title] = "Breadcrumb Bar color"
+designkit[color][breadcrumb][description] = "Breadcrumb Bar color."
+designkit[color][breadcrumb][default] = "#ffffff"
+
+; Front Search color
+designkit[color][frontsearch][title] = "Frontpage Searchbox color"
+designkit[color][frontsearch][description] = "Frontpage Searchbox color."
+designkit[color][frontsearch][default] = "#ffffff"
+
+; Footer color
+designkit[color][footer][title] = "Footer color"
+designkit[color][footer][description] = "Footer color."
+designkit[color][footer][default] = "#ffffff"
+
+; Bottom color
+designkit[color][bottom][title] = "Bottom color"
+designkit[color][bottom][description] = "Bottom color."
+designkit[color][bottom][default] = "#ffffff"
+
+; Sidebars color
+designkit[color][sidebars][title] = "Sidebars color"
+designkit[color][sidebars][description] = "Sidebars color."
+designkit[color][sidebars][default] = "#ffffff"

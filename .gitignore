@@ -1,0 +1,7 @@
+# Sass cache files #
+#######################
+.sass-cache/
+
+# Temp-files folders#
+###################
+sass-css/
