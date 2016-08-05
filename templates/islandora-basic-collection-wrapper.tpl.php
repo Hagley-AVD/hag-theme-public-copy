@@ -17,8 +17,8 @@
       <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
     <?php endif; ?>
     <?php if (!isset($collection_image)): ?>
-      <div class="">
-      <div class="collection-image-wrapper"></div>
+      <div class=>
+      <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
     <?php endif; ?>
 
     <?php if (isset($islandora_latest_objects)): ?>

@@ -36,7 +36,7 @@ ul li.leaf {
  */
 
 li a.active {
-  //color: #000;
+  ///color: #000;
 }
 
 /*
@@ -49,7 +49,7 @@ li a.active {
   }
   .block-menu .block-title,
   .block-menu-block .block-title {
-    @include element-invisible();
+    /*@include element-invisible();*/
   }
   ul.links, /* Main menu and secondary menu links */
   ul.menu { /* Menu block links */
@@ -59,18 +59,28 @@ li a.active {
 
     li { /* A simple method to get navigation links to appear in one line. */
       float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
       list-style-type: none;
       list-style-image: none;
     }
   }
 }
+@media (max-width:550px){
+ #navigation{
+  ul.menu{display:none;
+   li {display: none;}
+  }
+  h2.block-title{display:none;}
+ div#islandora-header-search{padding:0px;
+   .form-submit{display:none;}}
+ display:block;
+ }
+}
 
 .region-sub-header {
-  height: 25px;
-  margin-top: 0px;
-  margin-left: 0px !important;
-  background-color: black;
+    background: #555 none repeat scroll 0 0;
+    height: 90px;
+    left:0;
+    right:0;
 }
 
 /*
@@ -85,7 +95,7 @@ li a.active {
 }
 
 .sub-header-region-wrapper {
-  max-width:1600px;
+  max-width:90%;
   margin-left: auto;
   margin-right: auto;
 }

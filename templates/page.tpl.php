@@ -115,9 +115,6 @@
       </nav>
     <?php endif; ?>
     </div>
-    <?php if (isset($islandora_header_search)): ?>
-      <div id="islandora-header-search"><?php print $islandora_header_search; ?></div>
-    <?php endif; ?>
     
     
     
@@ -129,9 +126,8 @@
   </div>
   </header>
 <div class="body-wrapper">
-
+<?php print render($page['sub_header']); ?>
 <div id="page">
-  <?php print render($page['sub_header']); ?>
 
     <div id="navigation">
 
@@ -157,6 +153,10 @@
       <?php endif; ?>
 
       <?php print render($page['navigation']); ?>
+
+<?php if (isset($islandora_header_search)): ?>
+      <div id="islandora-header-search"><?php print $islandora_header_search; ?></div>
+    <?php endif; ?>
 
     </div><!-- /#navigation -->
     <?php print render($page['highlighted']); ?>

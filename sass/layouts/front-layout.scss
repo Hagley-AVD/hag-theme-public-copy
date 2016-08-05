@@ -12,13 +12,13 @@
 // Create page layout
 .f-wrapper{
   @include zen-grid-container;
-  .footer-popular-links{
+  #block-menu-menu-popular-links{
     @include zen-grid-item(1, 1);
     .field-content, a{
-      /*color: white;*/
+      color: white;
     }
   }
-  .footer-social-share{
+  #block-views-tumblr-view-block{
     @include zen-grid-item(1, 2);
   }
   .footer-logo{
@@ -28,6 +28,7 @@
     }
   }
   .footer-description{
+   @include zen-clear(right);
     @include zen-grid-item(2, 1, right);
     .field-content, a{
       color: white;
@@ -55,6 +56,7 @@
 .front{
   body{
     overflow: hidden !important;
+    background-attachment: fixed;
   }
 }
 
@@ -73,7 +75,6 @@
   //}
 //  #name-and-slogan{
 //    @include zen-grid-item(3, 3, right);
-//    color: white;
  // }
  // .region-header{
   //  @include zen-clear(right);
@@ -84,27 +85,22 @@
       float: right;
     }
   }
-  ul.menu{
-    float: left;
+   ul.menu{
     width: 100%;
-    padding: 0;
-    margin: 0;
     list-style-type: none;
   a{
-    float: left;
     text-decoration: none;
-    color: white;
     padding-left: 0em;
     padding-right: 0.6em;
   }
   a:hover{
     background-color: transparent;
-    color: white;
   }
   li {
     display: inline-block;
     }
   }
+
 }
 
 @media (max-width: 550px) {
@@ -160,32 +156,41 @@
   $zen-gutter-width: 10px;
 // Create page layout
 .f-wrapper{
+  $zen-column-count: 1;
   text-align: center;
   @include zen-grid-container;
-  .footer-popular-links{
-    @include zen-grid-item(6, 1);
+  #block-menu-menu-popular-links{
+    @include zen-grid-item(1, 1);
     @include zen-clear();
   }
+  #block-views-tumblr-view-block{
+    @include zen-grid-item(1, 1);
+    @include zen-clear();
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0;
+    margin: 0;
+  }
   .footer-social-share{
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(1, 1);
     @include zen-clear();
   }
   .footer-logo{
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(1, 1);
     .field-item{
       text-align: center;
     }
     @include zen-clear();
   }
   .footer-description{
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(1, 1);
     .field-content, a{
       color: white;
     }
     @include zen-clear();
   }
   .footer-hours{
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(1, 1);
     .field-content, a{
       color: white;
     }
@@ -194,7 +199,7 @@
   
  #block-views-social-links-block{
    $zen-gutter-width: 0px;
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(1, 1);
     background-color: rgba(054, 054, 054, .8) !important;
     @include zen-clear();
   }
@@ -213,4 +218,45 @@
    //   }
    // }
  // }
+}
+@media (max-width:1135px)and(min-width:550px) {
+.f-wrapper{
+  $zen-column-count: 2;
+  @include zen-grid-container;
+  #block-menu-menu-popular-links{
+    @include zen-grid-item(1, 1);
+    text-align:center;
+    .field-content, a{
+      color: white;
+    }
+  }
+  #block-views-tumblr-view-block{
+    @include zen-grid-item(1, 2);
+    text-align: center;
+  }
+  .footer-logo{
+   @include zen-clear(left);
+   @include zen-grid-item(1, 1);
+    .field-item{
+      text-align: center;
+    }
+  }
+  .footer-description{
+    @include zen-grid-item(1, 2);
+    text-align: center;
+    .field-content, a{
+      color: white;
+    }
+    p {
+      font-size: 80%;
+    }
+  }
+  .footer-hours{
+    @include zen-clear(left);
+    @include zen-grid-item(1, 2);
+    .field-content, a{
+       color: white;
+    }
+  }
+}
 }

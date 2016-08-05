@@ -4,7 +4,7 @@
 // Define the custom mixins for your project here.
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
 
-// Makes an element visually hidden, but accessible.
+/// Makes an element visually hidden, but accessible.
 // @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute !important;

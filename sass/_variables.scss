@@ -23,10 +23,12 @@ $gibson-stone:    #ebf4e1;
 $spanish-moss:    #535353;
 $oak-leaf:        #006633;
 
-
+$bluefix:         #195b6f;
+$bluetext:        #0d1013;
+$fakeblack:       #333;
 //Text Colors
-$active:          $gold;
-$hover:           $gold;
+$active:          $bluetext;
+$hover:           $bluefix;
 
 
 // a 'color' was set to "$fountainbleu", but is not defined"
@@ -49,18 +51,21 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
   text-shadow: 1px 1px 1px rgba(0,0,0,.15);
   @include text-shadow(rgba(#000, 0.2) 1px 1px 1px);
-  font-family: $base-font-family;
+  font-family: $lato;
 }
 h1 {
   //@include adjust-font-size-to(64px);
-  font-family: $base-font-family;
+  font-family: $lato;
   font-weight: 700;
   font-style: normal;
 }
 
 h2 {
   //@include adjust-font-size-to(52px);
-  color:$gold;
+  color: $fakeblack;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 1em;
 }
 
  h3,  h4,  h5,  h6 {color:$dark-blue;}

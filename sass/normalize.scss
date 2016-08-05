@@ -114,7 +114,6 @@ audio:not([controls]) {
  */
 
 html {
-  font-family: 'Open Sans', helvetica, airal, sans-serif;
   font-size: 85% * ($base-font-size / 16px); /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -159,11 +158,11 @@ body {
 
 a:link {
   text-decoration: none;
-  color: darken($dark-blue,15%);
+  color: #0d1013;
 }
 
 a:visited {
-  color: grey;
+  color: #0d1013;
 }
 
 a:hover,
@@ -545,7 +544,7 @@ button,
 input,
 select,
 textarea {
-  font-size: 100%; /* 1 */
+  font-size: 100% !important; /* 1 */
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {

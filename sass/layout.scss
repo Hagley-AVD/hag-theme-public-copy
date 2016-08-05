@@ -9,7 +9,17 @@ $legacy-support-for-ie7: false;
 $zen-column-count: 12;
 $zen-gutter-width: 20px;
 
+// fixed header chaos
+/*header#header {
+    top: 0;
+}
+nav {
+    margin-top: 7.6%;
+}
 
+.islandora-objects-grid{
+ text-align:center;
+}*/
 //
 // Skip link styling
 //
@@ -61,7 +71,7 @@ $zen-gutter-width: 20px;
   }
 }
 
-//
+///
 // Horizontal navigation bar
 @media all and (min-width: 480px) {
   $zen-column-count: 1;

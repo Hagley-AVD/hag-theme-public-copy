@@ -6,7 +6,7 @@
  * depending on whether blocks are placed in the left or right sidebars.
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */
+  */
 
 @import "base";
 @import "zen";
@@ -60,7 +60,7 @@ $zen-auto-include-item-base: false;
   @include zen-grid-item-base();
 }
 
-/* Containers for grid items and flow items. */
+//* Containers for grid items and flow items. */
 #header,
 #main,
 #footer {

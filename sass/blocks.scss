@@ -1,12 +1,13 @@
 /**
  * @file
  * Block Styling
+  *
  */
 
 @import "base";
 
 .block { /* Block wrapper */
-  margin-bottom: 1.1em;
+  /*margin-bottom: 1.1em;*/
   &.first { /* The first block in the region */
   }
 
@@ -20,15 +21,15 @@
   }
 
   h2.block-title { /* Block title */
-    font-family: 'Ropa Sans';
+    font-family: $lato; 
   }
 }
 
 h2.block-title {
     border-bottom: none;
     font-weight: normal;
-    padding: 0.5em 0 0.9em;
-    margin-bottom: 0.9em;
+    padding: 0em;
+    margin-bottom: 0em;
 }
 #block-views-footer-social-menu-links-block {
     float: right;
@@ -41,10 +42,16 @@ h2.block-title {
  * @Islandora Blocks
  *
 **/
+#block-islandora-solr-search-navigation{
+margin-top: 10px;
+margin-left: 5px;
+font-size: 1.1em;
+}
+
 #block-islandora-solr-simple {
   display: inline-block;
   margin-bottom: 1.5em;
-  max-width: 30em;
+  max-width: 31em;
   margin-left: 10%;
   .form-text{
     max-width: 97%;
@@ -53,6 +60,7 @@ h2.block-title {
 
 // Header search, all pages but the front.
 #islandora-header-search {
+  padding-top:45px;
   .simple-search-text{
     display: none;
     float: right;
@@ -61,21 +69,35 @@ h2.block-title {
     display: none !important;
   }
   .form-submit{
-    display: none;
+    background: transparent url("../images/search_btn.png") no-repeat scroll 0 0;
+    border: medium none;
+    clear: right;
+    color: transparent;
+    float: right;
+    height: 25px;
+    position: relative;
+    right: 32px;
+    top: 2px;
+    width: 25px;
   }
-  .form-text {
+  .form-text { 
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-shadow: 0 3px 3px -3px #808184;
+    color: #808184;
+    height: 1.9em;
+    padding-left: 0.5em;
     width: 100%;
-    border-radius: 10px;
-    font-size: 85%;
+    max-width: 92%;
   }
-  .form-item.form-type-textfield.form-item-islandora-simple-search-query {
-    width: 98%;
+  form-item.form-type-textfield.form-item-islandora-simple-search-query {
+   width:100%;
     display: inline-block;
     margin-bottom: .5em !important;
   }
-  .adv_search {
+  .adv_search {/*
     padding-right: 10px;
-  }
+ */ }
 }
 
 #block-menu-menu-popular-links{
@@ -83,15 +105,21 @@ h2.block-title {
   ul.menu{
     margin-bottom: 1.33em !important;
     margin-top: 0em !important;
-    padding-left: 0;
+    padding-left: 5px;
     padding-right: 0;
     list-style: none;
     li{
       list-style-image: none;
       list-style-type: none;
+      padding-bottom: 2px;
     }
   }
+  float: left;
+  width: 20%;
+  font-size: 1.25em;
 }
+.front #block-menu-menu-popular-links{width:40% !important; margin:0 !important;}
+
 .block-islandora-usage-stats{
   float: left;
   padding-left: 10px;
@@ -132,10 +160,16 @@ h2.block-title {
     padding-left: 5px;
     img{
       max-width: 2em;
+      transition: linear max-width .2s;
     }
   }
 }
-
+.recent-object-item-wrapper:hover{
+ img{
+  max-width: 100%;
+  position: relative;
+ }
+}
 .front-page-browse-all-collections{
   width: 100%;
   .view-frontpage-solr-boxes{
@@ -188,9 +222,11 @@ h2.block-title {
     padding: 0 !important;
     li {
       list-style: none;
+      padding: 1px 5px 1px 7px;
+      margin: 0px;
     }
     li:hover {
-      background: #F7F9F6;
+      background: #e1e1e1;
     }
   }
 
@@ -199,6 +235,7 @@ h2.block-title {
     color: #5A5B5D;
     font-size: 130%;
     font-weight: normal;
+    padding: 0.7em 0 0 0;
   }
 }
 
@@ -207,7 +244,13 @@ h2.block-title {
 }
 
 .plusminus {
-  display: none;
+  display: inline-block;
+    font-family: Arial;
+    font-weight: 600;
+    padding-left: 3px;
+}
+.plusminus a{
+   color: #5a5b5d;
 }
 
 #block-islandora-solr-display-switch {
@@ -465,8 +508,31 @@ h2.block-title {
 }
 
 #block-system-main-menu { /* "Main menu" block */
-}
-
+    color: #7c7c7c !important;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    left: 160px;
+    padding-right: 5px;
+/*    position: fixed;*/
+    top: 10px;
+    width: 70%;
+    z-index: 100;
+    margin-bottom: 0px;
+    a{
+      color: #7c7c7c;
+    }
+    a:hover{
+     color:#000;
+  } 
+  a:visited{color: #7c7c7c;}
+} 
+/*.hagmain li.first.leaf a { /* "Main menu" 2 Logo hack */
+/* font-family: "Roboto",arial,sans-serif !important;
+    font-size: 1.8em !important; /*going all barry bonds on this link*/
+/*    font-weight: 300;
+    margin-right: 15px;
+    padding-left: 7px !important;
+}*/
 #block-system-management { /* "Management" block for Drupal management menu */
 }
 
@@ -499,7 +565,7 @@ h2.block-title {
 
 /*
  * Social Media block
-*/
+ */
 
 #block-widgets-s-socialmedia-share-default {
   .widgets-element {
@@ -507,4 +573,140 @@ h2.block-title {
       width: 80%; 
     }
   }
+}
+#block-widgets-s-hagley-share{
+	padding-top:5px;
+}
+
+/*Custom Hagley Blocks*/
+#block-views-tumblr-view-block{
+  max-width: 20%;
+  box-sizing: border-box;
+  float: left;
+  width: auto;
+  word-wrap: break-word;
+  overflow:hidden;
+}
+ h3.tumblrTitle{
+  color: #fff;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 125%;
+  text-shadow: none;
+  display:block;
+  text-align: center;
+}
+ .vaultLink{
+  display:none;
+}
+ div.view-tumblr-view{
+ width:100%;
+}
+#block-views-tumblr-view-block img{
+ max-height: 20em;
+ height: auto;
+ max-width: 100%;
+ display: inline-block;
+ box-shadow: -1px 1px 8px 2px #e2e2e2;
+ margin-bottom:10px;
+}
+span.tumblrBody p {
+    display: none;
+}
+.view-tumblr-view .views-field-description{
+ display:inline-block;
+ text-align:center;
+ width: 100%;
+}
+/*tumblr frontpage*/
+.tumblrFront-block{
+display: inline-block;
+float:right;
+max-width:20%;
+max-height:27em;
+position: relative;
+margin-right: 10%;
+background: rgba(255, 255, 255, 0.9) !important;
+border-radius: 5px;
+padding-right: 7px;
+padding-left: 7px;
+margin-top: 5px;
+}.tumblrFront-block img{
+max-width:100%;
+max-height:25em;
+}
+.tumblrTitle-front{
+/*box-shadow: 4px 4px 5px #8b8b8b;
+margin-left: -2.5em;
+margin-top:.5em;*/
+margin-bottom:0;
+padding:0;
+max-width:100%;
+word-wrap: break-word;
+color:#fff;
+}
+.tumblrTitle-frontWrapper{
+width:100%;
+text-align:center;
+text-transform:uppercase;
+}
+
+.footer-logo img{max-width:100%;height:auto;}
+
+/*Menu Styles*/
+.top_menu{
+span.ext{display:none;}
+ul.menu{float:none;margin-left:160px;margin-top:0;margin-bottom:0;top:0;padding-top:7px;}
+ul.menu li a{color: #7c7c7c;
+    font-size: 0.85rem;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;}
+ul.menu li a:hover{color:#000;}
+}
+.libraries_title_menu{
+ul{list-style:none;}
+ul li{padding-top:13px;padding-bottom:6px;}
+ul li a{ color: #b3b3b3;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.4em;
+    text-decoration: none;
+    text-transform:uppercase;}
+ul li a:hover{color:#fff;}
+ul.menu_first{margin-top:0;margin-left:275px;float:left;}
+ul.menu_last{margin-top:0;margin-left:15%;float:left;}
+span.ext{display:none;}
+}
+
+#navigation{
+display:table;
+height:auto;
+margin:15px;
+padding:5px;
+margin-top: 20px;
+    background: #f6f6f6;
+    border-radius: 5px;
+ a{
+    color: #fff;
+    text-transform:uppercase;
+    padding:5px;
+}
+li{ background-color:#555555;
+   padding: 10px;
+       transition: .5s background-color;
+}
+li:hover{background-color:#eee;
+      a {color:#111;}
+}
+  h2.block-title{
+    color: #888 !important;
+    height:auto !important;
+    width:auto !important;
+    font-size:1.9em;
+   letter-spacing: -0.05px;
+  position:relative;
+  padding-bottom:10px;
+}
 }

@@ -3,11 +3,19 @@
 $zen-column-count: 2;
 $zen-gutter-width: 10px;
 // Create page layout
+div.collection-description-wrapper{
+  a {
+    color: #396c79;
+ }
+  a:hover{text-decoration: underline;
+ }
+}
 .collection-landing-wrapper{
 
   @include zen-grid-container;
   
   .collection-image-wrapper{
+     text-align:center;
     @include zen-grid-item(1, 1);
     .form-item{
       margin-top: 1em;
@@ -16,6 +24,7 @@ $zen-gutter-width: 10px;
   .collection-latest-objects-wrapper{
     @include zen-clear(right);
     @include zen-grid-item(1, 1, right);
+    padding-top: 15px;
   }
   .collection-description-wrapper{
     @include zen-clear(right);

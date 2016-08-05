@@ -1,7 +1,7 @@
 /**
  * @file
  * Form Styling
- */
+  */
 
 @import "base";
 
@@ -116,9 +116,9 @@ a.button { /* Buttons used by contrib modules like Media */
   }
 }
 
-.not-front #block-islandora-solr-simple .form-text {
+/*.not-front #block-islandora-solr-simple .form-text {
   width: 99%;
-}
+}*/
 
 #islandora-solr-result-count {
   float: left;
@@ -128,7 +128,7 @@ a.button { /* Buttons used by contrib modules like Media */
 }
 
 .adv_search {
-  font-size: 80%;
+  font-size: 90%;
   float: right;
 }
 

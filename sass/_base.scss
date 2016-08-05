@@ -63,6 +63,7 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$lato:            "Lato", arial, sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -72,6 +73,7 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 $base-font-family: $verdana; // The font family set on the html element.
 $font-body:        $verdana;
 $font-monospace:   $courier;
+$font-lato:        $lato;
 
 
 //
