@@ -16,10 +16,6 @@
       <div class="collection-landing-wrapper">
       <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
     <?php endif; ?>
-    <?php if (!isset($collection_image)): ?>
-      <div class=>
-      <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
-    <?php endif; ?>
 
     <?php if (isset($islandora_latest_objects)): ?>
       <div class="collection-latest-objects-wrapper"><h1 class="title">Recently Added</h1><?php print $islandora_latest_objects; ?></div>
