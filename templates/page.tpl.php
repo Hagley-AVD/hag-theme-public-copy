@@ -182,7 +182,6 @@
       
     </div><!-- /#content -->
 
-
     <?php
       // Render the sidebars to see if there's anything in them.
       $sidebar_first  = render($page['sidebar_first']);

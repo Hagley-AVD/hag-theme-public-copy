@@ -10,6 +10,12 @@
 @import "base";
 @import "_variables";
 
+/*front footer transparency*/
+.front .f-wrapper{
+	background: rgba(128,128,128,0.6);
+	padding:1em;
+	border-radius:15px;}
+
 a#clip {display:none;}
 #islandora-header-search{}
 
@@ -153,7 +159,7 @@ html {
 }
 
 body{
-  background-size: 120% auto !important;
+  //background-size: 120% auto !important;
   color: #333333;
   font-size: 85%;
   line-height: 1.5em;
@@ -473,7 +479,8 @@ dl.solr-thumb {
     display: none;
   }
   .region-highlighted{
-    max-width: 100%;
+    width: 100%;
+    display:inline-block;
   }
   #main{
     max-width:100%;
@@ -641,7 +648,7 @@ div.accordion_button.previous {
  */
 
 #content {
-  width: 100%;
+  width: auto;
   background: #e7e7e7;
   padding: 1.5em 1em;
   margin-left: auto;
@@ -855,7 +862,7 @@ border: 1px solid #d9d9d9;
   }
 }
 
-.islandora-audio-metadata, .islandora-book-metadata, .islandora-binary-object-metadata, .islandora-pdf-metadata, .islandora-basic-image-metadata, .islandora-large-image-metadata, .islandora-newspaper-metadata, .islandora-video-metadata{
+.islandora-audio-metadata, .islandora-oralhistories-metadata, .islandora-book-metadata, .islandora-binary-object-metadata, .islandora-pdf-metadata, .islandora-basic-image-metadata, .islandora-large-image-metadata, .islandora-newspaper-metadata, .islandora-video-metadata{
   li{
     margin-left: 20px;
   }
@@ -898,7 +905,7 @@ position:absolute;
  z-index: 100;
  }
 #block-views-tumblr-view-block{
- max-width:40% !important;
+/* max-width:40% !important; */
 }
 
 header#header{
@@ -907,7 +914,7 @@ header#header{
   height: 48px;
 }
 .region-sub-header{display:none;}
-.sidebars{display:none;}
+.region-sidebar-first{display:none;}
 }
 @media only screen and (max-width: 900px){
 .footer-description p{margin:0 !important;}
@@ -921,11 +928,6 @@ header#header{
   }
  }
 }}
-@media (max-width: 835px){
-.tumblrFront-block{
-  float:none !important; max-width: none !important; margin-left: 10%; margin-right:0;
- }
-}
 .islandora-objects-grid {text-align:center;}
 @media (min-width:550px) and (max-width:960px){
 .page-islandora-object .region-sidebar-first{
@@ -950,13 +952,14 @@ margin-left:0;
 }
 @media (max-width: 768px){
 
-  .region-sidebar-first{
+.page-islandora-search .region-sidebar-first{
     display: none;
   }
  .sidebar-first #content{
     width: 100%;
     margin: 0;
-  }
+ }
+ .islandora-compound-title img{display:block;}
 }
 @media (max-width: 550px){
 .front{
@@ -973,9 +976,153 @@ h2.block__title.block-title{display:none !important;}
 }
 }
 @media (max-width: 960px){
-.collection-search-wrapper{width:100% !important;}}
+.collection-search-wrapper{width:100% !important;}
+.islandora-compound-title img{display:block;}}
 @media (max-width: 550px){
 .collection-search-wrapper{
 select#edit-collection-select{width:100% !important;}
 #edit-islandora-simple-search-query--2{
 width:100% !important;}}}
+
+/*New Footer Styles*/
+.f-wrapper{
+	color: #fff;
+    line-height: 1.5em;
+    h3{
+	color:#000;
+	font-family: "Lato",arial,sans-serif;
+    font-size: 14.4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	text-shadow:none;
+ }
+   .locations{
+	font-size:0.9rem;
+	font-weight: 300;
+	 h3{line-height:0;text-shadow:none;}
+	li{list-style-type:none;}
+	.contactBox{padding-bottom:20px;}
+	ul{margin-bottom:0;}	
+}
+  #block-menu-menu-popular-links{
+	font-size: 14.4px;
+	.li a{color:#444;}
+	.li a:hover{color:#444;}
+h2{font-size:14.4px;color:#000;font-weight:bold;text-shadow:none;}}
+  .news-logos{
+	max-width: 225px;
+	font-size:0.9rem;
+	font-weight:300;
+	.footer-link{ a{
+    background: #333333 none repeat scroll 0 0;
+    border: 0 none;
+    color: white;
+    margin-top: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.5s ease 0s;}	
+		a:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;}
+	}
+    p{margin-top:5px;}
+}
+  .socialIcons{
+	a:hover{background-position: 0 -34px !important;}
+	.icons{
+		display:inline-block;
+		height:30px;
+		text-indent: -9999em;
+		transition: background 0.2s ease-in-out 0s;
+		width:30px;}
+		.facebook{
+			background: rgba(0, 0, 0, 0) url("/sites/default/files/images/icon_facebook_footer.png") no-repeat scroll 0 0;
+    			padding: 2px;
+		}
+		.twitter{
+			background: rgba(0, 0, 0, 0) url("/sites/default/files/images/icon_twitter_footer.png") no-repeat scroll 0 0;
+    			padding: 2px;
+		}
+		.youtube{
+			background: rgba(0, 0, 0, 0) url("/sites/default/files/images/icon_youtube_footer.png") no-repeat scroll 0 0;
+    			padding: 2px;
+		}
+		.pinterest{
+			background: rgba(0, 0, 0, 0) url("/sites/default/files/images/icon_pinterest_footer.png") no-repeat scroll 0 0;
+			padding: 2px;
+		}
+  }
+.smith{margin-top:2em;}
+}
+/*IA BookReader*/
+.BRicon.info{display:none;}
+.dl-pdf-wrap{display: inline-block;
+    float: right;
+    border: 1px solid #d9d9d9;
+    margin: 5px;}
+div:hover.dl-pdf-wrap{background:#efefef;}
+a.dl-pdf{font-family: "Lato", arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 5px 8px;
+    display:block;
+    line-height: 2.5;}
+a:hover.dl-pdf{text-decoration:underline;color:#000;}
+
+/*metadata*/
+.islandora-metadata{
+	a.fieldset-title{
+		font-size:1.1rem;
+		font-weight:700;
+		padding-left:30px;
+		text-decoration:none;
+	}
+	span.fieldset-legend{padding-left:0 !important;}
+	div.fieldset-wrapper{margin-top:10px;}
+	.islandora-inline-metadata{padding-left: 1.5em; padding-right:1.5em;}
+	.islandora-inline-metadata,.islandora-metadata-fields{font-size:0.95rem;}
+}
+/*mobile search results*/
+@media(max-width:768px) and (min-width:550px){
+dl.solr-grid-field{
+	margin: 1em 1%;
+	min-width: 140px;}
+.islandora-solr-display li.last{display:none;}}
+@media(max-width:550px){
+dl.solr-grid-field{
+	margin:1em 1%;
+	min-width:none;
+	width:45%;}
+.islando0ra-solr-display li.last{display:none;}}
+
+/*newspapers*/
+.islandora-newspaper-object{
+	margin-top:5px;
+}
+.islandora-newspaper-content{
+	font-size:1.1em;
+	float:none;
+	width: 100% !important;
+	.vertical-tabs{width:60%;}
+	.vertical-tabs-panes{
+	background:#fff;
+	padding:5px;
+}
+	.links a{
+	    background: #fff;
+	    color: #333;
+    	    line-height: 1.33;
+	    display: inline-block;
+	        text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-right: 2px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;}
+	.links a:hover{
+	background: #efefef;
+}
+}

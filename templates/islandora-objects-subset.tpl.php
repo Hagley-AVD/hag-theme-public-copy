@@ -16,10 +16,6 @@
       <div class="collection-landing-wrapper">
       <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
     <?php endif; ?>
-    <?php if (!isset($collection_image)): ?>
-      <div class=>
-      <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
-    <?php endif; ?>
 
     <?php if (isset($islandora_latest_objects)): ?>
       <div class="collection-latest-objects-wrapper"><h1 class="title">Recently Added</h1><?php print $islandora_latest_objects; ?></div>
@@ -44,6 +40,14 @@
     );
     ?>
   </span>
+<div class="facet-test">
+<?php
+$block = block_load('islandora_solr_search', 'basic_facets');
+$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+print $output;
+?>
+</div>
+
     <?php print $pager; ?>
     <?php print $content; ?>
     <?php print $pager; ?>
