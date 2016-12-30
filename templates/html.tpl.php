@@ -39,6 +39,7 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
     <![endif]-->
   <?php endif; ?>
+<script src="/sites/default/files/js/clipboard.min.js"></script>
 </head>
 
 <?php if (isset($background_image)):?>

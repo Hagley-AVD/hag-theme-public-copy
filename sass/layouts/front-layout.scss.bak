@@ -1,0 +1,265 @@
+@import "zen";
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+  $zen-column-count: 5;
+  $zen-gutter-width: 10px;
+// Create page layout
+.f-wrapper{
+  @include zen-grid-container;
+  #block-menu-menu-popular-links{
+    @include zen-grid-item(1, 1);
+    .field-content, a{
+      color: white;
+    }
+  }
+  #block-views-tumblr-view-block{
+    @include zen-grid-item(1, 2);
+  }
+  .footer-logo{
+    @include zen-grid-item(1, 3);
+    .field-item{
+      text-align: center;
+    }
+  }
+  .footer-description{
+   @include zen-clear(right);
+    @include zen-grid-item(2, 1, right);
+    .field-content, a{
+      color: white;
+    }
+    p {
+      font-size: 80%;
+    }
+  }
+  .footer-hours{
+    @include zen-clear(right);
+    @include zen-grid-item(2, 1, right);
+    .field-content, a{
+      color: white;
+    }
+  }
+  
+ #block-views-social-links-block{
+   $zen-gutter-width: 0px;
+    @include zen-clear(both);
+    @include zen-grid-item(5, 1);
+    background-color: rgba(054, 054, 054, .8) !important;
+  }
+}
+
+.front{
+  body{
+    overflow: hidden !important;
+    background-attachment: fixed;
+  }
+}
+
+
+
+  $zen-column-count: 6;
+  $zen-gutter-width: 5px;
+.h-wrapper{
+  @include zen-grid-container;
+ // #logo{
+//    @include zen-grid-item(1, 1);
+ // }
+//  #islandora-header-search{
+ //   @include vertical-align();
+ //   @include zen-grid-item(2, 1, right);
+  //}
+//  #name-and-slogan{
+//    @include zen-grid-item(3, 3, right);
+ // }
+ // .region-header{
+  //  @include zen-clear(right);
+  //  @include zen-grid-item(3, 3, right);
+ // }
+  #islandora-header-search{
+    #islandora-solr-simple-search-form {
+      float: right;
+    }
+  }
+   ul.menu{
+    width: 100%;
+    list-style-type: none;
+  a{
+    text-decoration: none;
+    padding-left: 0em;
+    padding-right: 0.6em;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  li {
+    display: inline-block;
+    }
+  }
+
+}
+
+@media (max-width: 550px) {
+  .collection-search-wrapper {
+    #islandora-collection-search-form{
+      #edit-simple{
+        div.form-item-collection-select{
+          select{
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+        div.form-item-islandora-simple-search-query{
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .h-wrapper {
+    #islandora-header-search{
+      #islandora-solr-simple-search-form{
+        float: none !important;
+      }
+    }
+  }
+  .region-header{
+    left: auto;
+    position: relative;
+    margin-top: auto;
+    margin-left: auto;
+    width: auto;
+  }
+  #block-system-main-menu ul.menu {
+    text-align: center;
+    li{
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  #name-and-slogan{
+    float: none;
+  }
+  
+  #content{
+    .block-islandora-solr{
+      max-width: 100%;
+      margin-left: 5px;
+    }
+  }
+  $zen-column-count: 5;
+  $zen-gutter-width: 10px;
+// Create page layout
+.f-wrapper{
+  $zen-column-count: 1;
+  text-align: center;
+  @include zen-grid-container;
+  #block-menu-menu-popular-links{
+    @include zen-grid-item(1, 1);
+    @include zen-clear();
+  }
+  #block-views-tumblr-view-block{
+    @include zen-grid-item(1, 1);
+    @include zen-clear();
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0;
+    margin: 0;
+    padding-top:5%;
+  }
+  .footer-social-share{
+    @include zen-grid-item(1, 1);
+    @include zen-clear();
+  }
+  .footer-logo{
+    @include zen-grid-item(1, 1);
+    .field-item{
+      text-align: center;
+    }
+    @include zen-clear();
+  }
+  .footer-description{
+    @include zen-grid-item(1, 1);
+    .field-content, a{
+      color: white;
+    }
+    @include zen-clear();
+  }
+  .footer-hours{
+    @include zen-grid-item(1, 1);
+    .field-content, a{
+      color: white;
+    }
+    @include zen-clear();
+  }
+  
+ #block-views-social-links-block{
+   $zen-gutter-width: 0px;
+    @include zen-grid-item(1, 1);
+    background-color: rgba(054, 054, 054, .8) !important;
+    @include zen-clear();
+  }
+}
+}
+
+.bottom-wrapper {
+  display: table;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  //#block-menu-menu-footer-menu{
+  //  ul.menu{
+  //    a{
+   //     color: white;
+   //   }
+   // }
+ // }
+}
+@media (max-width:1135px)and(min-width:550px) {
+.f-wrapper{
+  $zen-column-count: 2;
+  @include zen-grid-container;
+  #block-menu-menu-popular-links{
+    @include zen-grid-item(1, 1);
+    text-align:center;
+    .field-content, a{
+      color: white;
+    }
+  }
+  #block-views-tumblr-view-block{
+    @include zen-grid-item(1, 1);
+    @include zen-clear(left);
+    text-align: center;
+  }
+  .footer-logo{
+   @include zen-grid-item(1, 1, right);
+    .field-item{
+      text-align: center;
+    }
+  }
+  .footer-description{
+    @include zen-grid-item(1, 1, right);
+     @include zen-clear(right);
+    text-align: center;
+    .field-content, a{
+      color: white;
+    }
+    p {
+      font-size: 80%;
+    }
+  }
+  .footer-hours{
+    @include zen-grid-item(2, 1);
+ @include zen-clear(both);
+   text-align:center;
+    .field-content, a{
+       color: white;
+    }
+  }
+}
+}

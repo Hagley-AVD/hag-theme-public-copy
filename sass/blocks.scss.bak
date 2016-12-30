@@ -127,6 +127,7 @@ a:hover{color:#333; font-weight:700;}
   width: 20%;
   font-size: 1.25em;
 }
+.front #block-menu-menu-popular-links{width:40% !important; margin:0 !important;}
 
 .block-islandora-usage-stats{
   float: left;
@@ -599,12 +600,12 @@ a:hover{color:#333; font-weight:700;}
   word-wrap: break-word;
   overflow:hidden;
 }
- h3.tumblrTitle a{
-  color: #000 !important;
+ h3.tumblrTitle{
+  color: #fff;
   padding-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 120%;
+  font-size: 125%;
   text-shadow: none;
   display:block;
   text-align: center;
@@ -616,24 +617,15 @@ a:hover{color:#333; font-weight:700;}
  width:100%;
 }
 #block-views-tumblr-view-block img{
- margin-top:-20px;
- margin-left: -20px;
- //*max-height: 20em;
- //*height: auto;
- //*max-width: 100%;
- //*display: inline-block;
- //*box-shadow: -1px 1px 5px 2px #e2e2e2;
- //*margin-bottom:10px;
+ max-height: 20em;
+ height: auto;
+ max-width: 100%;
+ display: inline-block;
+ box-shadow: -1px 1px 8px 2px #e2e2e2;
+ margin-bottom:10px;
 }
 span.tumblrBody p {
     display: none;
-}
-.tumblrBody{
-	display:inline-block;
-	overflow:hidden;
-	max-height:18em;
-	max-width:19em;
-        border: 1px solid #fff;
 }
 .view-tumblr-view .views-field-description{
  display:inline-block;

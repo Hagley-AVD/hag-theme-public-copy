@@ -28,7 +28,8 @@ function hagthemepubliccopy_preprocess_html(&$variables){
       $variables['background_image'] = "/islandora/object/$pid/datastream/$dsid/view";
     } else {
       $path = drupal_get_path('theme', 'hagthemepubliccopy');
-      $image_path = $path . '/images/bg_lightwoodfloor.jpg';
+      $image_path = '/sites/all/themes/hag-theme-public-copy/images/view.jpg'; 
+     //$image_path = $path . '/images/bg_lightwoodfloor.jpg';
       $variables['background_image'] = $image_path;
     }
   }

@@ -115,11 +115,13 @@ $zen-auto-include-item-base: false;
     /* Span 4 columns, starting in 1st column from left. */
     #content {
       @include zen-grid-item(4, 1);
+      width: 85%;
     }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(1, 5);
+      width: 15%;
     }
   }
   /**
