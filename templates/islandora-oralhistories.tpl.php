@@ -44,6 +44,7 @@
 <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.4/css/bootstrap-select.min.css" media="all" />
 <script type = "text/javascript" language = "javascript">
         jQuery(window).bind("load", function() {
+			jQuery("option[value='or_transcriptFull']").attr("selected", null);
             jQuery("span.text:contains('Transcript')").parents("li.selected").removeClass("selected");
             jQuery("div[data-tier='or_transcriptFull']").css('display','none');
          });
