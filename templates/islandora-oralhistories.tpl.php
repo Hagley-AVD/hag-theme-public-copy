@@ -45,8 +45,11 @@
 <script type = "text/javascript" language = "javascript">
         jQuery(window).bind("load", function() {
 			jQuery("option[value='or_transcriptFull']").attr("selected", null);
+            jQuery("option[value='or_transcript']").attr("selected", null);
             jQuery("span.text:contains('Transcript')").parents("li.selected").removeClass("selected");
             jQuery("div[data-tier='or_transcriptFull']").css('display','none');
+            jQuery("span.text:contains('Partial transcript')").parents("li.selected").removeClass("selected");
+            jQuery("div[data-tier='or_transcript']").css('display','none');
          });
 
       </script> 
