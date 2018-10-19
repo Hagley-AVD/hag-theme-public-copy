@@ -32,7 +32,6 @@ function hagthemepubliccopy_preprocess_html(&$variables){
       $image_path = 'http://digital.hagley.org/sites/all/themes/hag-theme-public-copy/images/view.jpg';
       $variables['background_image'] = $image_path;
     }
-    drupal_add_js(drupal_get_path('theme', 'hagthemepubliccopy') . '/js/color-shuffle.js');
   }
 }
 
@@ -111,6 +110,15 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   $link = array(
     '#markup' => l(t("Advanced Search"), "advanced-search", array('attributes' => array('class' => array('adv_search')))),
   );
+ /* $eadoption = array(
+*		'ead' => t('Include Finding Aids'),
+*  );
+*/
+  $form['simple']['eadcheck'] = array(
+		'#type' => 'checkbox',
+		'#title' => t('Include Finding Aids'),
+		'#default_value' => 1,
+ );
   $form['simple']['advanced_link'] = $link;
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
   if (theme_get_setting('hagthemepubliccopy_search_text')) {
