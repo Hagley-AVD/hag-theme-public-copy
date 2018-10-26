@@ -110,14 +110,10 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   $link = array(
     '#markup' => l(t("Advanced Search"), "advanced-search", array('attributes' => array('class' => array('adv_search')))),
   );
- /* $eadoption = array(
-*		'ead' => t('Include Finding Aids'),
-*  );
-*/
   $form['simple']['eadcheck'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Include Finding Aids'),
-		'#default_value' => 1,
+		'#default_value' => 0,
  );
   $form['simple']['advanced_link'] = $link;
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
