@@ -110,10 +110,15 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   $link = array(
     '#markup' => l(t("Advanced Search"), "advanced-search", array('attributes' => array('class' => array('adv_search')))),
   );
+ if (strpos(rawurldecode($_SERVER['REQUEST_URI']),'-RELS_EXT_isMemberOfCollection_uri_ms:("info:fedora/islandora:ead")') === false && drupal_is_front_page() == FALSE) {
+    $ead_dv = 1;
+} else {
+    $ead_dv = 0;
+}
   $form['simple']['eadcheck'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Include Finding Aids'),
-		'#default_value' => 0,
+		'#default_value' => $ead_dv,
  );
   $form['simple']['advanced_link'] = $link;
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
