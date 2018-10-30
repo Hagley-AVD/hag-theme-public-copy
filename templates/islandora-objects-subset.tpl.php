@@ -29,7 +29,7 @@
 
   </div>
   <?php if (isset($islandora_collection_search_block)): ?>
-    <div class="collection-search-wrapper"><?php print $islandora_collection_search_block; ?></div>
+    <div class="collection-search-wrapper"><h3>Search Collection</h3><?php print $islandora_collection_search_block; ?></div>
   <?php endif; ?>
     <span class="islandora-objects-display-switch">
       <?php
@@ -40,6 +40,13 @@
     );
     ?>
   </span>
+<!--<div class="facet-test"> -->
+<?php
+$block = block_load('islandora_solr_search', 'basic_facets');
+$innerFacet = _block_get_renderable_array(_block_render_blocks(array($block)));
+$output = drupal_render($innerFacet);
+print $output; ?>
+<!-- </div> -->
     <?php print $pager; ?>
     <?php print $content; ?>
     <?php print $pager; ?>

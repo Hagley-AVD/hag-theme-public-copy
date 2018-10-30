@@ -28,7 +28,8 @@ function hagthemepubliccopy_preprocess_html(&$variables){
       $variables['background_image'] = "/islandora/object/$pid/datastream/$dsid/view";
     } else {
       $path = drupal_get_path('theme', 'hagthemepubliccopy');
-      $image_path = $path . '/images/bg_lightwoodfloor.jpg';
+      #$image_path = $path . '/images/bg_lightwoodfloor.jpg';
+      $image_path = 'http://digital.hagley.org/sites/all/themes/hag-theme-public-copy/images/view.jpg';
       $variables['background_image'] = $image_path;
     }
   }
@@ -109,6 +110,16 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   $link = array(
     '#markup' => l(t("Advanced Search"), "advanced-search", array('attributes' => array('class' => array('adv_search')))),
   );
+ if (strpos(rawurldecode($_SERVER['REQUEST_URI']),'-RELS_EXT_isMemberOfCollection_uri_ms:("info:fedora/islandora:ead")') === false && drupal_is_front_page() == FALSE) {
+    $ead_dv = 1;
+} else {
+    $ead_dv = 0;
+}
+  $form['simple']['eadcheck'] = array(
+		'#type' => 'checkbox',
+		'#title' => t('Include Finding Aids'),
+		'#default_value' => $ead_dv,
+ );
   $form['simple']['advanced_link'] = $link;
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
   if (theme_get_setting('hagthemepubliccopy_search_text')) {

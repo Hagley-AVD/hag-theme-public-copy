@@ -9,15 +9,55 @@
 }
   $zen-column-count: 5;
   $zen-gutter-width: 10px;
+// Create page layout
+//.f-wrapper{
+//  @include zen-grid-container;
+//  #block-menu-menu-popular-links{
+//    @include zen-grid-item(1, 1);
+//    .field-content, a{
+//      color: white;
+//    }
+//  }
+//  #block-views-tumblr-view-block{
+//    @include zen-grid-item(1, 2);
+//  }
+//  .footer-logo{
+//    @include zen-grid-item(1, 3);
+//    .field-item{
+//      text-align: center;
+//    }
+//  }
+//  .footer-description{
+//   @include zen-clear(right);
+//    @include zen-grid-item(2, 1, right);
+//    .field-content, a{
+//      color: white;
+//    }
+//    p {
+//      font-size: 80%;
+//    }
+//  }
+//  .footer-hours{
+//    @include zen-clear(right);
+//    @include zen-grid-item(2, 1, right);
+//    .field-content, a{
+//      color: white;
+//    }
+//  }
+//  
+// #block-views-social-links-block{
+//   $zen-gutter-width: 0px;
+//    @include zen-clear(both);
+//    @include zen-grid-item(5, 1);
+//    background-color: rgba(054, 054, 054, .8) !important;
+//  }
+//}
 
 .front{
   body{
     overflow: hidden !important;
     background-attachment: fixed;
   }
-div.body-wrapper{
-    background: rgba(50, 172, 209, .3);
-}
 }
 
 
@@ -26,6 +66,20 @@ div.body-wrapper{
   $zen-gutter-width: 5px;
 .h-wrapper{
   @include zen-grid-container;
+ // #logo{
+//    @include zen-grid-item(1, 1);
+ // }
+//  #islandora-header-search{
+ //   @include vertical-align();
+ //   @include zen-grid-item(2, 1, right);
+  //}
+//  #name-and-slogan{
+//    @include zen-grid-item(3, 3, right);
+ // }
+ // .region-header{
+  //  @include zen-clear(right);
+  //  @include zen-grid-item(3, 3, right);
+ // }
   #islandora-header-search{
     #islandora-solr-simple-search-form {
       float: right;
@@ -98,24 +152,116 @@ div.body-wrapper{
       margin-left: 5px;
     }
   }
-}
   $zen-column-count: 5;
   $zen-gutter-width: 10px;
 // Create page layout
 .f-wrapper{
   $zen-column-count: 1;
-// text-align: center;
+  text-align: center;
   @include zen-grid-container;
+//  #block-menu-menu-popular-links{
+//    @include zen-grid-item(1, 1);
+//    @include zen-clear();
   }
+//  #block-views-tumblr-view-block{
+//    @include zen-grid-item(1, 1);
+//    @include zen-clear();
+//    width: 100% !important;
+//    max-width: 100% !important;
+//    padding: 0;
+//    margin: 0;
+//  }
+//  .footer-social-share{
+//    @include zen-grid-item(1, 1);
+//    @include zen-clear();
+//  }
+//  .footer-logo{
+//    @include zen-grid-item(1, 1);
+//    .field-item{
+//      text-align: center;
+//    }
+//    @include zen-clear();
+//  }
+//  .footer-description{
+//    @include zen-grid-item(1, 1);
+//    .field-content, a{
+//      color: white;
+//    }
+//    @include zen-clear();
+//  }
+//  .footer-hours{
+//    @include zen-grid-item(1, 1);
+//     .field-content, a{
+//     color: white;
+//    }
+//    @include zen-clear();
+//  }
+  
+// #block-views-social-links-block{
+//   $zen-gutter-width: 0px;
+//    @include zen-grid-item(1, 1);
+//    background-color: rgba(054, 054, 054, .8) !important;
+//    @include zen-clear();
+//  }
+//}
+//}
 
 .bottom-wrapper {
   display: table;
   height: 100%;
   text-align: center;
   width: 100%;
+  //#block-menu-menu-footer-menu{
+  //  ul.menu{
+  //    a{
+   //     color: white;
+   //   }
+   // }
+ // }
 }
+//@media (max-width:1135px)and(min-width:550px) {
+//.f-wrapper{
+//  $zen-column-count: 2;
+//  @include zen-grid-container;
+//  #block-menu-menu-popular-links{
+//    @include zen-grid-item(1, 1);
+//    text-align:center;
+//    .field-content, a{
+//      color: white;
+//    }
+//  }
+//  #block-views-tumblr-view-block{
+//    @include zen-grid-item(1, 2);
+//    text-align: center;
+//  }
+//  .footer-logo{
+//   @include zen-clear(left);
+//   @include zen-grid-item(1, 1);
+//    .field-item{
+//      text-align: center;
+//    }
+//  }
+//  .footer-description{
+//    @include zen-grid-item(1, 2);
+//    text-align: center;
+//    .field-content, a{
+//      color: white;
+//    }
+//    p {
+//      font-size: 80%;
+//    }
+//  }
+//  .footer-hours{
+//    @include zen-clear(left);
+//    @include zen-grid-item(1, 2);
+//    .field-content, a{
+//       color: white;
+//    }
+//  }
+//}
+//}
 $zen-column-count:4;
-.f-wrapper{
+.page-node-39 .f-wrapper{
 $zen-grid-width:100%;
 @include zen-grid-container();
 #block-block-6{
@@ -134,7 +280,7 @@ max-width:100%;}
 }
 $zen-column-count:2;
 @media (max-width:1024px)and(min-width:550px){
-.f-wrapper{
+.page-node-39 .f-wrapper{
 $zen-grid-width:100%;
 @include zen-grid-container();
 #block-block-6{
@@ -163,8 +309,7 @@ max-width:100%;
  }
 $zen-column-count:1;
 @media(max-width:550px){
-.f-wrapper{
-text-align:center;
+.page-node-39 .f-wrapper{
 $zen-grid-width:100%;
 @include zen-grid-container();
 #block-block-6{
@@ -173,7 +318,6 @@ margin-bottom:20px;
 max-width:100%;}
 #block-views-tumblr-view-block{
 @include zen-grid-item(1, 1);
-@include zen-clear();
 margin-bottom:20px;
 max-width:100%;}
 #block-menu-menu-popular-links{
@@ -188,118 +332,4 @@ max-width:100%;
 	.news-logos{max-width:100%;}}
   }
 }
-$zen-column-count:3;
-.front .f-wrapper{
-$zen-grid-width:100%;
-@include zen-grid-container();
-#block-block-6{
-@include zen-grid-item(1, 1);
-padding-top:10px;
-max-width:100%;
-padding-left:4%;}
-#block-menu-menu-popular-links{
-@include zen-grid-item(1, 2);
-max-width:100%;}
-#block-block-7{
-@include zen-grid-item(1, 3);
-max-width:100%;}
 }
-$zen-column-count:2;
-@media (max-width:1024px)and(min-width:550px){
-.front .f-wrapper{
-$zen-grid-width:100%;
-@include zen-grid-container();
-#block-block-6{
-@include zen-grid-item(1, 1);
-padding-top:10px;
-max-width:100%;
-padding-left:4%;}
-#block-menu-menu-popular-links{
-@include zen-grid-item(1, 2);
-max-width:100%;
-clear:none;}
-#block-block-7{
-@include zen-clear();
-@include zen-grid-item(2, 1);
-max-width:100%;
-margin-top:20px;}
- }
-}
-$zen-column-count:1;
-@media(max-width:550px){
-.front .f-wrapper{
-text-align:center;
-$zen-grid-width:100%;
-@include zen-grid-container();
-#block-block-6{
-@include zen-grid-item(1, 1);
-margin-bottom:20px;
-max-width:100%;}
-#block-menu-menu-popular-links{
-@include zen-grid-item(1, 1);
-@include zen-clear();
-margin-bottom:20px;
-max-width:100%;}
-#block-block-7{
-@include zen-grid-item(1, 1);
-@include zen-clear();
-max-width:100%;
-        .news-logos{max-width:100%;}}
-  }
-}
-$zen-column-count:2;
-.front .region-highlighted{
-$zen-grid-width:100%; 
-#block-panels-mini-simple-search-mini-container{
-@include zen-grid-item(1, 1);
-left: 10%;
-padding:15px;
-#block-islandora-solr-simple{
-margin-top:0px;}}
-.tumblrFront-block{
-@include zen-grid-item(1, 1, right);
-right: 10%;
-padding:10px;}
-}
-
-@media(max-width:1024px)and(min-width:50px){
-$zen-column-count:2;
-.front .region-highlighted{
-$zen-grid-width:100%;
-#block-panels-mini-simple-search-mini-container{
-@include zen-grid-item(2, 1);
-@include zen-clear();
-padding:15px;
-text-align:center;
-padding:0px;}
-.tumblrFront-block{
-@include zen-grid-item(2, 1);
-@include zen-clear();
-text-align:center;
-padding:10px;
-max-width:100%;
-img {max-width:100%; max-height:100%;}
-}
-#block-islandora-solr-simple {
-max-width:100%;
-margin-left:0;
-}
-.tumblrFront{ 
-float:none;
-margin-right:0; margin-top:0;
-max-width:100%;}
-.tumblrBody{max-width:100%;}
-}}
-
-
-//@media(max-width: 550px){
-//.front .region-highlighted{
-//$zen-grid-width:100%;
-//.tumblrFront-block{
-//  max-width:100%;
-// }
-//#block-islandora-solr-simple{
-//max-width:100%;
-//width:100%;
-//left:unset;}
-//}}

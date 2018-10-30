@@ -31,6 +31,7 @@ stylesheets-conditional[IE 8][all][] = css/ie8.css
 
 scripts[] = js/script.js
 scripts[] = js/frontpage_behaviour.js
+scripts[] = js/clipboard.min.js
 
 regions[sub_header]     = Sub Header
 regions[header]         = Header
