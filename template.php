@@ -143,6 +143,16 @@ function hagthemepubliccopy_form_islandora_solr_simple_search_form_alter(&$form,
   );
 }
 
+function hagthemepubliccopy_form_islandora_solr_advanced_search_form_alter(&$form, &$form_state, $form_id) {
+$form['advanced']['eadcheck'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Include Finding Aids'),
+		'#weight' => 10,
+        '#default_value' => 0,
+ );
+}
+
+
 /**
  * Implements hook_preprocess().
  */

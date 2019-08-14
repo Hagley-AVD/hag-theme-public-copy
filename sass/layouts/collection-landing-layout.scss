@@ -40,6 +40,16 @@ $zen-column-count: 2;
 $zen-gutter-width: 10px;
 // Create page layout
 div.collection-description-wrapper{
+ h1.title{
+    margin:0;
+    font-size:1.3rem;
+	font-weight:700;
+	line-height:1.5em;
+	letter-spacing:1px;
+	color:#333;
+	text-transform:uppercase;
+	text-shadow: none !important;
+}
   a {
     color: #396c79;
  }
@@ -51,6 +61,7 @@ div.collection-description-wrapper{
   @include zen-grid-container;
   
   .collection-image-wrapper{
+	padding-right:10px !important;
      text-align:center;
     @include zen-grid-item(1, 1);
     .form-item{
@@ -65,6 +76,7 @@ div.collection-description-wrapper{
   .collection-description-wrapper{
     @include zen-clear(right);
     @include zen-grid-item(1, 1, right);
+	padding-left:10px !important;
   }
 }
 
@@ -115,3 +127,68 @@ $zen-gutter-width: 10px;
   }
 }
 }
+/*advanced search and browse*/
+$zen-column-count: 2;
+.islandora-advanced-search{
+	@include zen-grid-item(1,1);
+	select#edit-collections{max-width:100%;}
+	.form-item-collections{max-width:100%;}
+}
+.solr-facet-browse{
+	@include zen-grid-item(1,2);
+	.item-list{
+		float:left;
+		font-size:1.1em;
+	}
+	h2{padding-bottom:10px;}
+}
+body.section-advanced-search article.node-page{
+	@include zen-grid-item(2,1);
+	@include zen-clear();	
+	float: none;
+	p{margin-top:0px;}
+}
+ul.islandora-solr-facet-pages-results{
+	font-size:1.1em;
+	list-style-position:inside;
+	column-count:4;
+}
+@media (max-width: 1024px){
+	ul.islandora-solr-facet-pages-results{
+        column-count:3;
+}
+}
+@media (max-width: 768px){
+        ul.islandora-solr-facet-pages-results{
+        column-count:2;
+}
+}
+@media (max-width: 550px){
+        ul.islandora-solr-facet-pages-results{
+        column-count:1;
+}
+}
+.not-front{
+ .islandora-solr-collection-display{
+		.islandora-objects-grid-item{ 
+			dl.islandora-object{
+				min-width:175px;
+				margin: 1.25em;
+}
+			dl.islandora-object:hover{
+				opacity:.8;
+				a{
+					color: #0b2831;
+  				}  
+  			} 
+} 
+.collection-search-wrapper h3{
+text-shadow:none;
+color:#5A5B5D;
+padding: .5em .25em .25em 5px;
+font-weight:normal;
+font-size:130%;
+}
+}
+}
+/*testing*/

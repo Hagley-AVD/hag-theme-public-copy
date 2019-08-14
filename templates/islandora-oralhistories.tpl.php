@@ -17,7 +17,6 @@
  * @see theme_islandora_oralhistories()
  */
 ?>
-
 <div class="islandora-oralhistories-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="VideoObject">
   <div class="islandora-oralhistories-content-wrapper  clearfix">
     <?php if ($islandora_content['viewer']): ?>

@@ -85,13 +85,21 @@ a.button { /* Buttons used by contrib modules like Media */
 }
 
 .collection-search-wrapper {
+  background: #f6f6f6;
   border-radius: 5px;
   min-height: 45px;
-  margin-bottom: 10px;
-  verticle-align: middle;
-  #islandora-collection-search-form {
+  margin-bottom: 1em;
+  vertical-align: middle;
+  width:100%;
+  select{
+  font-family: 'Lato',arial,sans-serif;
+  font-size:1rem;
+}  
+#islandora-collection-search-form {
     margin: 10px;
-    padding-top: 8px;
+    margin-top:0px;
+    margin-bottom: .5em;
+    padding-top: 0px;
     #edit-submit, .form-submit{
       display: none;
     }
@@ -107,9 +115,12 @@ a.button { /* Buttons used by contrib modules like Media */
           border-radius: 7px 7px 7px 7px;
           box-shadow: 0 3px 3px -3px #808184;
           color: #808184;
-          height: 1.9em;
+          height: 1.6em;
           padding-left: 0.5em;
           width: 45%;
+	  margin-left: .5em;
+	  font-family: 'Lato',arial,sans-serif;
+	  font-size:1rem;
         }
       }
     }
@@ -245,3 +256,4 @@ form {
 td.menu-disabled {
   background: #ccc;
 }
+/*fixed*/
