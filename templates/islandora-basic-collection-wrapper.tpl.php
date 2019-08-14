@@ -17,13 +17,13 @@
       <div class="collection-image-wrapper"><?php print $collection_image; ?></div>
     <?php endif; ?>
 
-    <?php if (isset($islandora_latest_objects)): ?>
-      <div class="collection-latest-objects-wrapper"><h1 class="title">Recently Added</h1><?php print $islandora_latest_objects; ?></div>
-    <?php endif; ?>
+<?php if (isset($islandora_latest_objects)): ?>
+   <!--    <div class="collection-latest-objects-wrapper"><h1 class="title">Recently Added</h1><?php //print $islandora_latest_objects; ?></div> -->
+   <?php endif; ?>
 
 
     <?php if (!empty($dc_array['dc:description']['value'])): ?>
-      <div class="collection-description-wrapper"><h1 class="title">About this collection</h1><p><?php print $dc_array['dc:description']['value']; ?></p></div>
+      <div class="collection-description-wrapper"><h1 class="title">About dis collection</h1><p><?php print $dc_array['dc:description']['value']; ?></p><p><?php print $solr_fields['display_label']; ?></p></div>
     <?php endif; ?>
 
 
