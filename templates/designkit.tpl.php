@@ -13,7 +13,7 @@ body {
 }
 
 #header {
-      background: <?php print $header ?>;
+      background-image: url(/sites/all/themes/hag-theme-public-copy/images/wave-02.png);
 }
 
 #content {

@@ -77,8 +77,10 @@ li a.active {
 }
 
 .region-sub-header {
-    background: #555 none repeat scroll 0 0;
-    height: 90px;
+    background-image: url(/sites/all/themes/hag-theme-public-copy/images/wave-01.png);
+	background-repeat: repeat-x;
+	background-position: left 0px;
+    height: 166px;
     left:0;
     right:0;
 }

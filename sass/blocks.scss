@@ -60,8 +60,8 @@ a:hover{color:#333; font-weight:700;}
 #block-islandora-solr-simple {
   display: inline-block;
   margin-bottom: 1.5em;
-  max-width: 31em;
-  margin-left: 10%;
+  max-width: 35em;
+  margin-left: 8%;
   .form-text{
     max-width: 97%;
   }
@@ -88,16 +88,18 @@ a:hover{color:#333; font-weight:700;}
     right: 32px;
     top: 2px;
     width: 25px;
+	margin: 0 3px;
+	display:none;
   }
   .form-text { 
     border: 1px solid #ccc;
     border-radius: 7px;
-    box-shadow: 0 3px 3px -3px #808184;
+    box-shadow: 0 3px 2px -3px #808184;
     color: #808184;
     height: 1.9em;
     padding-left: 0.5em;
     width: 100%;
-    max-width: 92%;
+    max-width: 98%;
   }
   form-item.form-type-textfield.form-item-islandora-simple-search-query {
    width:100%;
@@ -120,7 +122,7 @@ a:hover{color:#333; font-weight:700;}
     li{
       list-style-image: none;
       list-style-type: none;
-      padding-bottom: 2px;
+      padding-bottom: 3px;
     }
   }
   float: left;
@@ -685,25 +687,27 @@ border:none;
 /*Menu Styles*/
 .top_menu{
 span.ext{display:none;}
-ul.menu{float:none;margin-left:160px;margin-top:0;margin-bottom:0;top:0;padding-top:7px;}
-ul.menu li a{color: #7c7c7c;
-    font-size: 0.85rem;
+ul.menu{float:none;margin-left:7%;margin-top:0;margin-bottom:0;top:0;padding-top:1.25em;}
+ul.menu li a{color: #fff;
+    font-size: 1.25em;
     padding: 0 10px;
     text-decoration: none;
-    text-transform: uppercase;}
-ul.menu li a:hover{color:#000;}
+    text-transform: uppercase;
+	margin:0 1em 0 1em;}
+ul.menu li a:hover{color:#ccc;}
 }
 .libraries_title_menu{
 margin-left:170px;
-ul{list-style:none;}
-ul li{padding-top:13px;padding-bottom:6px;}
-ul li a{ color: #b3b3b3;
+ul{list-style:none; margin-top:45px;display:inline-block;}
+ul li{padding:5px 1em 5px 1em; display:inline-block;margin:0 2em 0 2em;}
+ul li#first{padding-left:0;margin-left:0;}
+ul li a{ color: #fff;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.4em;
     text-decoration: none;
     text-transform:uppercase;}
-ul li a:hover{color:#fff;}
+ul li a:hover{color:#ccc;}
 ul.menu_first{margin-top:0;margin-left:0px;float:left;}
 ul.menu_last{margin-top:0;margin-left:170px;float:left;}
 span.ext{display:none;}
@@ -718,9 +722,9 @@ span.ext{display:none;}
 #navigation{
 display:table;
 height:auto;
-margin:15px;
+margin:5px 5px 5px 0px;
 padding:5px;
-margin-top: 20px;
+margin-top: 0px;
     background: #f6f6f6;
     border-radius: 5px;
  a{
@@ -728,7 +732,7 @@ margin-top: 20px;
     text-transform:uppercase;
     padding:5px;
 }
-li{ background-color:#555555;
+li{ background-color:#00425f;
    padding: 10px;
        transition: .5s background-color;
 }
@@ -736,12 +740,16 @@ li:hover{background-color:#eee;
       a {color:#111;}
 }
   h2.block-title{
-    color: #888 !important;
+    color: #333;
     height:auto !important;
     width:auto !important;
-    font-size:1.9em;
-   letter-spacing: -0.05px;
+    font-size:2.2em;
+   letter-spacing: 5px;
   position:relative;
-  padding-bottom:10px;
+  padding: 5px 5px 10px 5px;
 }
 }
+@media(max-width:1450px){.top_menu ul.menu{ margin-left:100px;}}
+@media(max-width:800px){.top_menu ul.menu li a{ margin:0 .5em 0 .5em;}}
+@media(max-width:767px){.top_menu{display:none;}}
+.sf-menu-island-nav{display:inline;position:relative;z-index:1;}
